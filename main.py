@@ -1,6 +1,8 @@
 from skafossdk import Skafos
 import logging
 
+# comment
+
 def hello_world():
   print("Hello, world.")
   skafos = Skafos(log_level=logging.DEBUG)
