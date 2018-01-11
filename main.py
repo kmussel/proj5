@@ -1,4 +1,4 @@
-import skafossdk as Skafos
+from skafossdk import Skafos
 import logging
 
 def hello_world():
