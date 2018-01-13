@@ -1,1 +1,6 @@
-skafossdk>=0.0.6
+skafossdk==0.0.7.dev1
+#-e file:///Users/kmussel/Development/metismachine/sdk#egg=skafossdk
+#http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl 
+#http://download.pytorch.org/whl/torch-0.3.0.post4-cp36-cp36m-macosx_10_7_x86_64.whl 
+torchvision
+pandas
