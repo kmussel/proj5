@@ -1,16 +1,9 @@
-from skafossdk import Skafos
-import logging
-
-# comment
-
-# def hello_world():
-#   print("Hello, world.")
-#   skafos = Skafos(log_level=logging.DEBUG)
-
-# if __name__ == "__main__":
-#   hello_world()
-
-
+# # Weather Prediction Example
+# This template shows how to fetch weather data for a particular zip code from the Metis Machine data engine, and then use those data to train a dummy [recurrent neural network](https://en.wikipedia.org/wiki/Recurrent_neural_network) that will predict some aspect of the weather from the historical time series at that location.
+# Obviously, weather modeling is not actually this easy, but the following code shows how to:
+# * access data via the Metis Machine data engine
+# * transform those data using a deep learning model
+# * persist the resulting transformation so that it can be accessed via an outward-facing API
 
 import os
 import torch
@@ -23,11 +16,11 @@ import logging
 # ## Access weather data using the Metis Machine SDK
 # Any data intake or model project on the platform begins by initializing the Skafos SDK.
 # This allows your task to access the resources of the platform, as well as ensures proper health monitoring.
-# 
+#
 # *Unresponsive tasks will eventually be purged.*
 
 from skafossdk import *
-print('Initializing the SDK connection')
+print('Initializing the SDK connection', flush=True)
 skafos = Skafos(log_level=logging.DEBUG)
 
 
@@ -36,12 +29,10 @@ res = skafos.engine.create_view(
                       "table": "weather_noaa"}, DataSourceType.Cassandra).result()
 print("created a view of NOAA historial weather data")
 
-print(res)
 
 print("pulling historical weather from a single zip code")
 weather_json = skafos.engine.query("SELECT * from weather_noaa WHERE zipcode = 23250").result()
 
-print(weather_json)
 
 # validate a single record
 weather_json['data'][0]
@@ -79,7 +70,7 @@ weather.sort_index(inplace=True)
 
 # ## Feature Engineering
 # These are not necessarilly excellent features, but simply illustrate a common step in the predictive process.
-# 
+#
 # * length of day
 # * average temperature
 # * change in average temperature
@@ -146,7 +137,7 @@ y_test = torch.autograd.Variable(
 class WeatherNet(torch.nn.Module):
     hidden_layers = 2
     hidden_size = 6
-    
+
     def __init__(self):
         super(WeatherNet, self).__init__()
         # use a small hidden layer since we have such narrow inputs
@@ -184,7 +175,7 @@ for i in range(120):
         out, hidden = model(x_train, hidden)
         loss = criterion(out, y_train)
         if i % 10 == 0:
-            print('{:%H:%M} epoch {} loss: {}'.format(datetime.now(), i, loss.data.numpy()[0]), flush=True)
+            print('{:%H:%M:%S} epoch {} loss: {}'.format(datetime.now(), i, loss.data.numpy()[0]), flush=True)
         loss.backward()
         return loss
     optimizer.step(closure)
@@ -215,7 +206,7 @@ eval_data['day'] = eval_data.index
 # weather_norm = weather_features.apply(lambda c: 0.5 * (c - c.mean()) / c.std())
 # ```
 
-eval_data['tavg'] = 2. * eval_data['tavg_norm'] * weather_features['tavg'].std() + weather_features['tavg'].mean() 
+eval_data['tavg'] = 2. * eval_data['tavg_norm'] * weather_features['tavg'].std() + weather_features['tavg'].mean()
 
 # # Persist Predictions
 
@@ -236,6 +227,8 @@ schema = {
 
 data_out = eval_data.dropna().drop('tavg_norm', axis=1).to_dict(orient='records')
 
-# skafos = Skafos()
-# skafos.engine.save(schema, data_out).result()
+skafos.engine.save(schema, data_out).result()
 print("Finished saving", flush=True)
+
+# ## Accessing persisted data
+# Ingested data is available from the Metis Machine API using your credentials as described in the [API docs](https://docs.metismachine.io/docs/api-accessing-your-results)
