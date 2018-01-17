@@ -11,7 +11,7 @@ import torch.nn as nn
 from torch.autograd import Variable
 from datetime import datetime
 import pandas as pd
-import logging
+
 
 # ## Access weather data using the Metis Machine SDK
 # Any data intake or model project on the platform begins by initializing the Skafos SDK.
@@ -20,8 +20,8 @@ import logging
 # *Unresponsive tasks will eventually be purged.*
 
 from skafossdk import *
-print('Initializing the SDK connection', flush=True)
-skafos = Skafos(log_level=logging.DEBUG)
+print('Initializing the SDK connection')
+skafos = Skafos()
 
 
 res = skafos.engine.create_view(
@@ -227,8 +227,9 @@ schema = {
 
 data_out = eval_data.dropna().drop('tavg_norm', axis=1).to_dict(orient='records')
 
+
 skafos.engine.save(schema, data_out).result()
-print("Finished saving", flush=True)
+
 
 # ## Accessing persisted data
 # Ingested data is available from the Metis Machine API using your credentials as described in the [API docs](https://docs.metismachine.io/docs/api-accessing-your-results)

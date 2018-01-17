@@ -1,4 +1,4 @@
 project_token: b6d9eb46051e1bf29b6f4dc4
 name: proj5
 language: python
-entrypoint: test.py
+entrypoint: main.py
