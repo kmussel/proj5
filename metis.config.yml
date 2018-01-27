@@ -5,6 +5,6 @@ project_tasks:
      name: ingestor
      language: python
      entrypoint: test.py
-     parallelism: 2
+     parallelism: 1
 
 
