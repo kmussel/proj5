@@ -5,6 +5,5 @@ project_tasks:
      name: ingestor
      language: python
      entrypoint: test.py
-     schedule: "*/1 * * * *"
 
 
