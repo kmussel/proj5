@@ -6,5 +6,6 @@ project_tasks:
      language: python
      entrypoint: test.py
      schedule: "*/2 * * * *"
+     parallelism: 2
 
 
