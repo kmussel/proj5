@@ -18,8 +18,8 @@ priceStr = "$" + str(price) + " /BTC"
 dt = datetime.now().strftime("%Y-%m-%d %H:%M:S")
 print("Bitstamp price at %s: %s" % (dt, priceStr))
 
-print("HELLO")
+# print("HELLO")
 
-time.sleep(10)
+# time.sleep(10)
 
-print("DONE")
+# print("DONE")
