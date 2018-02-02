@@ -20,6 +20,6 @@ print("Bitstamp price at %s: %s" % (dt, priceStr))
 
 # print("HELLO")
 
-time.sleep(10)
+# time.sleep(10)
 
 # print("DONE")
