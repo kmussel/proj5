@@ -10,5 +10,5 @@ project_tasks:
       name: ingestor2
       language: python
       entrypoint: test2.py
-      parallelism: 1
+      parallelism: 2
       dependencies: ["b5fa5958-bcad-4825-8dcd-60a1b71eef52"]
