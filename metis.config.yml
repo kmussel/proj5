@@ -12,4 +12,4 @@ project_tasks:
       name: ingestor2
       language: python
       entrypoint: test2.py
-      parallelism: 2
+      parallelism: 3
