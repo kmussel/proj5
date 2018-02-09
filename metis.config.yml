@@ -6,11 +6,3 @@ project_tasks:
       language: python
       entrypoint: test.py
       schedule: "*/1 * * * *"
-      max_runs: 2
-      parallelism: 2
-    - project_task_id: "3903f4ab-748c-4f1e-9868-0c16e5ae59af"
-      name: ingestor2
-      language: python
-      entrypoint: test2.py
-      parallelism: 3
-      dependencies: ["b5fa5958-bcad-4825-8dcd-60a1b71eef52"]
