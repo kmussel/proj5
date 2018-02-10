@@ -1,13 +1,12 @@
 project_token: b6d9eb46051e1bf29b6f4dc4
 name: proj5
-update_policy: restart_none
+update_policy: restart_all
 project_tasks:
     - project_task_id: "b5fa5958-bcad-4825-8dcd-60a1b71eef52"
       name: ingestor
       language: python
       entrypoint: test.py
-      schedule: "*/1 * * * *"
-      max_runs: 8
+      schedule: "*/2 * * * *"
       parallelism: 1
     - project_task_id: "3903f4ab-748c-4f1e-9868-0c16e5ae59af"
       name: ingestor2
