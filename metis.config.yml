@@ -13,5 +13,5 @@ project_tasks:
       name: ingestor2
       language: python
       entrypoint: test2.py
-      schedule: "*/3 * * * *"
+      schedule: "*/2 * * * *"
       parallelism: 1
