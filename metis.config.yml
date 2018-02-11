@@ -14,5 +14,5 @@ project_tasks:
       language: python
       entrypoint: test2.py
       schedule: "*/2 * * * *"
-      max_runs: 30      
+      max_runs: 10      
       parallelism: 1
