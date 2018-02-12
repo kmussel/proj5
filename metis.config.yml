@@ -8,7 +8,7 @@ project_tasks:
       entrypoint: test.py
       schedule: "*/1 * * * *"
       max_runs: 3
-      parallelism: 1
+      parallelism: 2
     - project_task_id: "3903f4ab-748c-4f1e-9868-0c16e5ae59af"
       name: ingestor2
       language: python
