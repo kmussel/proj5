@@ -13,6 +13,4 @@ project_tasks:
       name: ingestor2
       language: python
       entrypoint: test2.py
-      schedule: "*/2 * * * *"
-      max_runs: 1   
       parallelism: 2
