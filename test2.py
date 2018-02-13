@@ -20,12 +20,15 @@ from datetime import datetime
 
 print("HELLO")
 
-# time.sleep(40)
-cnt = 0
-while True:
-    print("IN LOOP {}".format(cnt))
-    sleep(10)
-    cnt += 1
+sleep(10)
+
+print("SUP")
+
+# cnt = 0
+# while True:
+#     print("IN LOOP {}".format(cnt))
+#     sleep(10)
+#     cnt += 1
 
 
 print("DONE")
