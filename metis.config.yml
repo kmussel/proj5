@@ -13,6 +13,6 @@ project_tasks:
       name: ingestor2
       language: python
       entrypoint: test2.py
-      max_runs: 5
-      parallelism: 2
+      max_runs: 4
+      parallelism: 3
 
