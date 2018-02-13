@@ -26,7 +26,7 @@ print("SUP")
 
 cnt = 0
 while True:
-    print("IN LOOP {}".format(cnt))
+    print("IN LOOP {}".format(cnt), flush=True)
     sleep(10)
     cnt += 1
 
