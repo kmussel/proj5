@@ -20,8 +20,6 @@ from datetime import datetime
 
 print("HELLO")
 
-sleep(10)
-
 print("SUP")
 
 cnt = 0
