@@ -24,11 +24,11 @@ sleep(10)
 
 print("SUP")
 
-# cnt = 0
-# while True:
-#     print("IN LOOP {}".format(cnt))
-#     sleep(10)
-#     cnt += 1
+cnt = 0
+while True:
+    print("IN LOOP {}".format(cnt))
+    sleep(10)
+    cnt += 1
 
 
 print("DONE")
