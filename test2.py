@@ -20,6 +20,12 @@ print("Bitstamp price at %s: %s" % (dt, priceStr))
 
 # print("HELLO")
 
-time.sleep(40)
+# time.sleep(40)
+cnt = 0
+while True:
+    print("IN LOOP {}".format(cnt))
+    time.sleep(10)
+    cnt += 1
+
 
 print("DONE")
