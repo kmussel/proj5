@@ -14,5 +14,5 @@ project_tasks:
       language: python
       entrypoint: test2.py
       max_runs: 4
-      parallelism: 1
+      parallelism: 2
 
