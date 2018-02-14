@@ -7,14 +7,23 @@ project_tasks:
       language: python
       entrypoint: test.py
       schedule: "*/2 * * * *"
-      max_runs: 2
+      max_runs: 5
       parallelism: 1
     - project_task_id: "3903f4ab-748c-4f1e-9868-0c16e5ae59af"
       name: ingestor2
       language: python
       entrypoint: test2.py
       schedule: "*/2 * * * *"
+      max_runs: 3
+      parallelism: 2
+      dependencies: ["b5fa5958-bcad-4825-8dcd-60a1b71eef52"]
+    - project_task_id: "50c0a313-0b84-4533-b2b8-3080e90d3bf5"
+      name: ingestor2
+      language: python
+      entrypoint: test3.py
+      schedule: "*/1 * * * *"
       max_runs: 2
       parallelism: 1
-      dependencies: ["b5fa5958-bcad-4825-8dcd-60a1b71eef52"]
+      dependencies: ["3903f4ab-748c-4f1e-9868-0c16e5ae59af"]  
+    
 

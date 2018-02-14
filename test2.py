@@ -18,15 +18,11 @@ from datetime import datetime
 # dt = datetime.now().strftime("%Y-%m-%d %H:%M:S")
 # print("Bitstamp price at %s: %s" % (dt, priceStr))
 
-print("HELLO")
-
-print("SUP")
-
-cnt = 0
-while True:
-    print("IN LOOP {}".format(cnt), flush=True)
-    sleep(10)
-    cnt += 1
+print("HELLO Number 2")
 
 
-print("DONE")
+
+sleep(10)
+
+
+print("Number 2: DONE")
