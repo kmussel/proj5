@@ -3,14 +3,14 @@ import time
 
 print("Executing Numero 3", flush=True)
 
-sleep(10)
+time.sleep(10)
 
 print("Numero 3: SOME MORE")
 
 cnt = 0
 while True:
     print("IN LOOP {}".format(cnt), flush=True)
-    sleep(10)
+    time.sleep(10)
     cnt += 1
 
 
