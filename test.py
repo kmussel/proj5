@@ -3,10 +3,10 @@ import time
 
 print("HELLO")
 
-time.sleep(30)
+time.sleep(10)
 
 print("SOME MORE")
 
-time.sleep(20)
+time.sleep(10)
 
 print("DONE")
