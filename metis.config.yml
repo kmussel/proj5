@@ -13,6 +13,6 @@ project_tasks:
       language: python
       entrypoint: test2.py
       schedule: "*/1 * * * *"
-      max_runs: 5
+      max_runs: 10
       parallelism: 1
       dependencies: ["b5fa5958-bcad-4825-8dcd-60a1b71eef52"]
