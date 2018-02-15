@@ -22,7 +22,7 @@ print("HELLO Number 2")
 
 
 
-sleep(10)
+sleep(30)
 
 
 print("Number 2: DONE")
