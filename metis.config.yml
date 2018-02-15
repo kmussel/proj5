@@ -1,12 +1,12 @@
 project_token: b6d9eb46051e1bf29b6f4dc4
 name: proj5
-update_policy: restart_all
+update_policy: restart_none
 project_tasks:
     - project_task_id: "b5fa5958-bcad-4825-8dcd-60a1b71eef52"
       name: test1
       language: python
       entrypoint: test.py
-      schedule: "*/2 * * * *"
+      schedule: "*/1 * * * *"
       max_runs: 3
       parallelism: 1
     - project_task_id: "3903f4ab-748c-4f1e-9868-0c16e5ae59af"
@@ -14,6 +14,5 @@ project_tasks:
       language: python
       entrypoint: test2.py
       schedule: "*/1 * * * *"
-      max_runs: 10
-      parallelism: 1
-      dependencies: ["b5fa5958-bcad-4825-8dcd-60a1b71eef52"]
+      max_runs: 2
+      parallelism: 2
