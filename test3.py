@@ -10,7 +10,7 @@ print("Numero 3: SOME MORE")
 cnt = 0
 while cnt < 7:
     print("IN LOOP {}".format(cnt), flush=True)
-    time.sleep(3)
+    time.sleep(10)
     cnt += 1
 
 
