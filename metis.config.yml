@@ -12,5 +12,5 @@ project_tasks:
       name: other_test3
       language: python
       entrypoint: test3.py
-      max_runs: 1
-      parallelism: 2
+      schedule: "*/2 * * * *"
+      parallelism: 1
