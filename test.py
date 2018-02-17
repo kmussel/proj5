@@ -7,6 +7,11 @@ time.sleep(10)
 
 print("SOME MORE")
 
-time.sleep(10)
+#time.sleep(10)
+cnt = 0
+while True:
+    print("IN TEST1 LOOP {}".format(cnt), flush=True)
+    time.sleep(10)
+    cnt += 1
 
 print("DONE")
