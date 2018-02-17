@@ -9,7 +9,7 @@ print("SOME MORE")
 
 #time.sleep(10)
 cnt = 0
-while True:
+while cnt < 20:
     print("IN TEST1 LOOP {}".format(cnt), flush=True)
     time.sleep(10)
     cnt += 1
