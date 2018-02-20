@@ -1,17 +1,28 @@
 import os
 import time
+import sys
 
-print("HELLO")
 
-time.sleep(10)
+def main():
+    print("HELLO")
 
-print("SOME MORE")
+    os.environ["TESTING"] = "123"
+    #print(sys.argv)
 
-#time.sleep(10)
-cnt = 0
-while cnt < 20:
-    print("IN TEST1 LOOP {}".format(cnt), flush=True)
-    time.sleep(10)
-    cnt += 1
+    # time.sleep(10)
 
-print("DONE")
+    print("SOME MORE")
+
+    #time.sleep(10)
+    # cnt = 0
+    # while cnt < 20:
+    #     print("IN TEST1 LOOP {}".format(cnt), flush=True)
+    #     time.sleep(10)
+    #     cnt += 1
+
+    print("DONE")
+
+    return "MY RETURN DATA"
+
+if __name__ == '__main__':
+     main()

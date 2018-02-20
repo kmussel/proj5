@@ -3,6 +3,7 @@ import time
 import requests, json
 from time import sleep
 from datetime import datetime
+import sys
 
 # def getBitcoinPrice():
 #     URL = 'https://www.bitstamp.net/api/ticker/'
@@ -18,11 +19,16 @@ from datetime import datetime
 # dt = datetime.now().strftime("%Y-%m-%d %H:%M:S")
 # print("Bitstamp price at %s: %s" % (dt, priceStr))
 
+
+# def main():
 print("HELLO Number 2")
+# print sys.argv
+# for line in sys.stdin:
+#     print(line)
 
 
-
-sleep(30)
-
-
+# sleep(30)
 print("Number 2: DONE")
+
+# if __name__ == '__main__':
+#     main()
