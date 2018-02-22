@@ -6,20 +6,11 @@ project_tasks:
       name: Job1
       language: python
       entrypoint: "test.py | sleep 15 | test2.py"
-      max_runs: 10
-      parallelism: 2
+      schedule: "*/2 * * * *"
+      parallelism: 1
     - project_task_id: "3903f4ab-748c-4f1e-9868-0c16e5ae59af"
       name: JobTwo
       language: python
       entrypoint: test3.py
       schedule: "*/1 * * * *"
-      max_runs: 1
       parallelism: 1
-
-project_token: b6d9eb46051e1bf29b6f4dc4
-jobs:
-  - job_id: "b5fa5958-bcad-4825-8dcd-60a1b71eef52"
-    name: test1
-    language: python
-    run: ["ingest.py", "process.py"]
-    parallelism: 2
