@@ -7,12 +7,12 @@ project_tasks:
       language: python
       entrypoint: "test.py | sleep 45 | test2.py"
       schedule: "*/5 * * * *"
-      max_runs: 20
+      max_runs: 10
       parallelism: 1
     - project_task_id: "3903f4ab-748c-4f1e-9868-0c16e5ae59af"
       name: JobTwo
       language: python
       entrypoint: test3.py
       schedule: "*/5 * * * *"
-      max_runs: 20
+      max_runs: 10
       parallelism: 1
