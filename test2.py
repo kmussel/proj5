@@ -22,7 +22,7 @@ import sys
 
 # def main():
 print("HELLO Number 2")
-print(os.environ)
+print("ENV2 = {}".format(os.environ), flush=True)
 # print sys.argv
 # for line in sys.stdin:
 #     print(line)
