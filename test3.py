@@ -5,8 +5,8 @@ print("Executing Numero 3", flush=True)
 
 time.sleep(10)
 
-print("Numero 3: SOME MORE")
-
+print("Numero 3: More")
+print(os.environ, flush=True)
 cnt = 0
 while cnt < 7:
     print("IN LOOP {}".format(cnt), flush=True)

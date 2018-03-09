@@ -9,10 +9,10 @@ import sys
 # conda install -y pytorch-cpu torchvision -c maciejkula -c pytorch spotlight
 
 def main():
-    print("HELLO")
+    print("HELLO test.py")
 
-    # os.environ["TESTING"] = "123"
-    print(os.environ)
+    # os.environ["TESTING"] = "123"    
+    print(os.environ, flush=True)
     #print(sys.argv)
 
     # time.sleep(10)
