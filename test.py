@@ -11,7 +11,8 @@ import sys
 def main():
     print("HELLO")
 
-    os.environ["TESTING"] = "123"
+    # os.environ["TESTING"] = "123"
+    print(os.environ)
     #print(sys.argv)
 
     # time.sleep(10)
