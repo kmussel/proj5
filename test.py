@@ -1,7 +1,12 @@
 import os
 import time
 import sys
+#import conda
+#from subprocess import call
 
+#call(["conda", "install", "-y", "pytorch-cpu", "torchvision", "-c", "maciejkula", "-c", "pytorch", "spotlight"])
+
+# conda install -y pytorch-cpu torchvision -c maciejkula -c pytorch spotlight
 
 def main():
     print("HELLO")
