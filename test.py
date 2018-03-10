@@ -12,8 +12,8 @@ def main():
     print("HELLO test.py")
 
     # os.environ["TESTING"] = "123"    
-    for k, v in os.environ.items():
-        print("{} = {}".format(k, v))
+    # for k, v in os.environ.items():
+    #     print("{} = {}".format(k, v))
     # print("ENV = {}".format(os.environ), flush=True)
     #print(sys.argv)
 

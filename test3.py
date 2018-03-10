@@ -7,8 +7,8 @@ time.sleep(10)
 
 print("Numero 3: More")
 # print("ENV3 = {}".format(os.environ), flush=True)
-for k, v in os.environ.items():
-    print("{} = {}".format(k, v))
+# for k, v in os.environ.items():
+#     print("{} = {}".format(k, v))
 
 cnt = 0
 while cnt < 7:
