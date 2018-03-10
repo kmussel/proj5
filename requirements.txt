@@ -3,7 +3,7 @@
 # pandas
 # skafossdk>=0.0.8
 # conda>=4.3.16
-internalsdk>=0.0.4.dev0
+# internalsdk>=0.0.4.dev0
 skafossdk==0.0.11.dev0
 # -e file:///Users/kmussel/Development/metismachine/sdk#egg=skafossdk
 # http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl 
